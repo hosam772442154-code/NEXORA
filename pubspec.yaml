@@ -1,5 +1,5 @@
 name: nexora_it
-description: تطبيق NEXORA IT - بوابة التكنولوجيا الذكية للجامعات
+description: Nexora IT Academic Application.
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -9,23 +9,27 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_localizations:
-    sdk: flutter
-
-  # شبكة الاتصال والـ HTTP
-  http: ^1.1.0
-
-  # اختيار الصور من الكاميرا والمعرض (يدعم Web + Android تلقائياً)
-  image_picker: ^1.0.4
-
+  http: ^1.2.0
+  shared_preferences: ^2.2.0
+  cupertino_icons: ^1.0.6
+  firebase_core: ^3.13.0
+  firebase_auth: ^5.5.3
+  cloud_firestore: ^5.0.2
+  image_picker: ^1.1.2
+  firebase_storage: ^12.4.10
+  file_picker: ^8.1.4
+  cached_network_image: ^3.4.1
+  path_provider: ^2.1.6
+  url_launcher: ^6.3.0
+  flutter_local_notifications: ^17.2.1
+  firebase_messaging: ^15.2.0
+  intl: ^0.20.3
+  dio: ^5.10.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
-
 flutter:
   uses-material-design: true
-
-  # أصول التطبيق والموارد
   assets:
-    - assets/images/logo.jpg
+    - assets/images/nexora_logo.png
