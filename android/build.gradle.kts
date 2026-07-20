@@ -23,10 +23,14 @@ tasks.register<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
 }
 subprojects {
-    afterEvaluate {
-        if (project.hasProperty("android")) {
-            val android = project.extensions.getByName("android") as com.android.build.gradle.BaseExtension
-            android.compileSdkVersion(36)
+    plugins.withId("com.android.library") {
+        extensions.configure<com.android.build.gradle.LibraryExtension> {
+            compileSdk = 36
+        }
+    }
+    plugins.withId("com.android.application") {
+        extensions.configure<com.android.build.gradle.AppExtension> {
+            compileSdk = 36
         }
     }
 }
